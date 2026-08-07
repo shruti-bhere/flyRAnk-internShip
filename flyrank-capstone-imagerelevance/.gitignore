@@ -1,0 +1,40 @@
+# Environment variables and API keys (CRITICAL)
+.env
+.env.local
+*.env
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Database files
+*.db
+*.sqlite3
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Pytest / Test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local data / Image storage (Keep small samples only if necessary)
+data/images/*
+!data/images/.gitkeep
+
+# Docker / Build artifacts
+*.egg-info/
+dist/
+build/
