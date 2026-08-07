@@ -1,0 +1,200 @@
+/* ==========================================================================
+   BENTO GRID ARCHITECTURE
+   ========================================================================== */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.bento-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bento-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+/* Track Span Modifiers */
+.col-span-2 { grid-column: span 2; }
+.row-span-2 { grid-row: span 2; }
+
+/* Bento Styling Variants */
+.variant-primary {
+    background: linear-gradient(to bottom right, var(--bg-surface), var(--bg-surface-alt));
+    border-left: 4px solid var(--accent);
+}
+
+.variant-dark {
+    background-color: #0b0f19;
+    color: #f8fafc;
+    border-color: #1e293b;
+}
+
+/* Decorative Card Inner Elements */
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.bento-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.compact-list, .badge-list {
+    list-style: none;
+    margin-top: 0.75rem;
+}
+
+.compact-list li {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-muted);
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.compact-list li::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.badge-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background-color: var(--bg-surface-alt);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Academic Flow Arrow Sub-Components */
+.direction-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    background-color: var(--bg-base);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.flow-node {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.flow-arrow {
+    font-size: 1.25rem;
+    color: var(--accent);
+    animation: slideRight 2s infinite;
+}
+
+/* Live Operational Tracking Sub-Component */
+.status-indicator {
+    align-self: flex-start;
+    background-color: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   HORIZONTAL PROGRESS TIMELINE
+   ========================================================================== */
+.timeline-container {
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.timeline-track {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.timeline-track::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.timeline-step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    flex: 1;
+}
+
+.step-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--bg-surface);
+    border: 4px solid var(--border-color);
+    margin: 0 auto 1rem auto;
+    transition: all 0.3s ease;
+}
+
+.step-dot.red { border-color: #ef4444; }
+.step-dot.yellow { border-color: #eab308; }
+.step-dot.green { border-color: #22c55e; }
+
+.timeline-step h4 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.timeline-step p { font-size: 0.85rem; color: var(--text-muted); }
+
+/* ==========================================================================
+   BENTO MEDIA QUERY RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .col-span-2 { grid-column: span 1; }
+    .direction-flow { flex-direction: column; gap: 1rem; }
+    .flow-arrow { transform: rotate(90deg); animation: none; }
+    .timeline-track { flex-direction: column; gap: 2rem; }
+    .timeline-track::before { display: none; }
+}
+
+@keyframes slideRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+}

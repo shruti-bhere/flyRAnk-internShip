@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruti Suresh Bhere | AI Engineer & Portfolio Platform</title>
+    <!-- Font Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Component CSS Inclusions -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bento.css">
+</head>
+<body>
+
+    <!-- 📱 Sticky Dynamic Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Shruti Bhere<span class="accent">.</span></a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#assistant" class="nav-link">AI Assistant</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn" aria-label="Toggle Color Theme">🌗</button>
+                <button id="menuToggle" class="menu-btn" aria-label="Toggle Mobile Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 🏠 Section 1: Interactive Hero Section -->
+        <section id="home" class="hero-section text-center">
+            <div class="hero-content">
+                <h1 class="hero-title">👋 Hi, I am <span class="gradient-text">Shruti Suresh Bhere</span></h1>
+                <p class="hero-subtitle">I am an AI Engineer building <span id="typing-text" class="accent-code"></span><span class="cursor">|</span></p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary">📂 View Projects</a>
+                    <a href="assets/resume.pdf" download class="btn btn-secondary" id="downloadResume">📄 Download Resume</a>
+                    <a href="#assistant" class="btn btn-accent">🤖 Ask AI Assistant</a>
+                </div>
+            </div>
+            <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+                <span class="arrow">⬇️</span>
+            </a>
+        </section>
+
+        <!-- 👤 Section 2: Re-Imagined Asymmetrical Bento Grid -->
+        <section id="about" class="section-container">
+            <h2 class="section-title text-center">About The Engineer</h2>
+            <div class="bento-grid">
+                <!-- Core Profile Intersection -->
+                <div class="bento-card col-span-2 row-span-2 variant-primary">
+                    <div class="card-icon">🚀</div>
+                    <h3>The Core Profile Intersection</h3>
+                    <p>Final-year B.Com student bridging the gap between commerce workflows and technical AI[cite: 1]. I translate complex business and financial requirements into scalable, autonomous systems[cite: 1].</p>
+                </div>
+
+                <!-- Local AI Stack -->
+                <div class="bento-card variant-dark">
+                    <div class="status-indicator"><span class="pulse-dot"></span> System Status: Online</div>
+                    <h3>🦙 The Local AI Stack</h3>
+                    <p>Dedicated local inference pipeline executing secure configurations:</p>
+                    <ul class="compact-list">
+                        <li>Ollama Orchestration</li>
+                        <li>Llama 3 LLM Architecture</li>
+                        <li>Private & Data-Secure Pipelines</li>
+                    </ul>
+                </div>
+
+                <!-- Certifications Engine -->
+                <div class="bento-card">
+                    <div class="card-icon">🏅</div>
+                    <h3>Certification Engine</h3>
+                    <p>Verified Developer Badges:</p>
+                    <ul class="badge-list">
+                        <li class="badge">⭐ LangGraph Essentials[cite: 1]</li>
+                        <li class="badge">⭐ LangSmith Agent Builder[cite: 1]</li>
+                    </ul>
+                </div>
+
+                <!-- Academic & Self-Taught Direction -->
+                <div class="bento-card col-span-2">
+                    <div class="card-icon">📊</div>
+                    <h3>Compass: Academic & Self-Taught Direction</h3>
+                    <div class="direction-flow">
+                        <div class="flow-node"><strong>📚 B.Com Expected</strong><br>May 2026[cite: 1]</div>
+                        <div class="flow-arrow">➡️</div>
+                        <div class="flow-node"><strong>💻 Software Engineering</strong><br>Advanced Self-Taught Curriculum[cite: 1]</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline & Progression Sub-component -->
+            <div class="timeline-container">
+                <h3 class="text-center">Timeline & Progression</h3>
+                <div class="timeline-track">
+                    <div class="timeline-step">
+                        <div class="step-dot red"></div>
+                        <h4>🏛️ S.C.V.P.M College[cite: 1]</h4>
+                        <p>Core Business Foundations[cite: 1]</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-dot yellow"></div>
+                        <h4>📜 Advanced AI Frameworks</h4>
+                        <p>LangChain / LangGraph Stack[cite: 1]</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-dot green"></div>
+                        <h4>🚀 Built Platform</h4>
+                        <p>Live Agent Integration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⚡ Section 3: Skill Matrix Grid -->
+        <section id="skills" class="section-container bg-alt">
+            <h2 class="section-title text-center">Skill Matrix</h2>
+            <div class="skills-grid">
+                <!-- AI Engineering Card -->
+                <div class="skill-card">
+                    <h4>AI Engineering & Frameworks</h4>
+                    <ul class="skill-list">
+                        <li>Generative AI & LLMs[cite: 1]</li>
+                        <li>LangGraph (Agentic AI Workflows)[cite: 1]</li>
+                        <li>RAG Pipelines & Model Context Protocol (MCP)[cite: 1]</li>
+                        <li>Ollama & Llama 3 Deployment[cite: 1]</li>
+                    </ul>
+                </div>
+                <!-- Backend Architecture Card -->
+                <div class="skill-card">
+                    <h4>Backend & Databases</h4>
+                    <ul class="skill-list">
+                        <li>FastAPI & Python System Architectures[cite: 1]</li>
+                        <li>Node.js Engine Run times[cite: 1]</li>
+                        <li>PostgreSQL & pgvector Storage Indexing[cite: 1]</li>
+                        <li>Docker & Docker Compose Containerization[cite: 1]</li>
+                    </ul>
+                </div>
+                <!-- Frontend Stack Card -->
+                <div class="skill-card">
+                    <h4>Frontend Development</h4>
+                    <ul class="skill-list">
+                        <li>HTML5 & CSS3 Structural Layouts</li>
+                        <li>JavaScript (ES6 Core Standard)</li>
+                        <li>Asynchronous Fetch APIs & Web interfaces</li>
+                        <li>Responsive User Experience Layout Design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📂 Section 4: Project Workspace & Live GitHub Grid -->
+        <section id="projects" class="section-container">
+            <h2 class="section-title text-center">Project Workspace</h2>
+            <div class="filter-wrapper text-center">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI / Agents</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+            </div>
+            
+            <!-- Curated Main Projects Grid -->
+            <div class="projects-grid" id="curatedProjects">
+                <!-- JavaScript will populate static cards dynamically, or fall back to static items -->
+                <article class="project-card" data-category="ai">
+                    <h3>📦 Legal Document Helper</h3>
+                    <p>Android UI + Node.js backend running an AI RAG pipeline to safely analyze complex legal documentation[cite: 1].</p>
+                    <div class="card-links">
+                        <a href="#" class="link-btn">View Details</a>
+                    </div>
+                </article>
+                <article class="project-card" data-category="ai">
+                    <h3>🤖 Email Drafting Bot</h3>
+                    <p>Automated multi-step email composition logic driven by LangGraph stateful workflow loops[cite: 1].</p>
+                    <div class="card-links">
+                        <a href="#" class="link-btn">View Details</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Dynamic GitHub API Interface -->
+            <div class="github-showcase">
+                <h3 class="text-center">⭐ Live GitHub Repositories</h3>
+                <div class="github-grid" id="githubRepoGrid">
+                    <!-- Dynamic fetch items append execution loops here -->
+                    <div class="loading-spinner text-center">Connecting to GitHub API Core...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🤖 Section 5: Central AI Assistant Workspace -->
+        <section id="assistant" class="section-container bg-alt">
+            <h2 class="section-title text-center">Central AI Assistant</h2>
+            <div class="assistant-wrapper">
+                <div class="chat-header">
+                    <span class="bot-avatar">🤖</span>
+                    <div class="bot-meta">
+                        <h4>Shruti's AI Agent</h4>
+                        <span class="bot-status"><span class="pulse-dot green"></span> Online - Powered by Ollama + Llama 3</span>
+                    </div>
+                </div>
+                <div class="chat-body" id="chatOutput">
+                    <div class="chat-message bot">
+                        Hello! I am Shruti's conversational portfolio agent. I have deep RAG context loaded straight from her <code>resume.pdf</code> database[cite: 1]. Ask me anything about her backend stacks, certifications, or project workflows![cite: 1]
+                    </div>
+                </div>
+                <div class="chat-suggestions">
+                    <button class="suggest-btn">"What AI projects has she built?"</button>
+                    <button class="suggest-btn">"Does she know LangGraph?"</button>
+                    <button class="suggest-btn">"Tell me about the Email Bot."</button>
+                </div>
+                <form class="chat-input-area" id="chatForm">
+                    <input type="text" id="chatInput" placeholder="Ask anything about Shruti's portfolio or resume..." required autocomplete="off">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ✉️ Section 6: Functional Contact Gateway -->
+        <section id="contact" class="section-container contact-section">
+            <h2 class="section-title text-center">Contact Gateway</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" rows="5" required placeholder="Let's build something advanced together..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 📊 Footer & Administrative Telemetry -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Shruti Suresh Bhere. Systems Engineered Privately.</p>
+            <div class="footer-telemetry">
+                <span>📈 Platform Views: <strong id="visitorCounter">000000</strong></span>
+            </div>
+            <a href="/admin/login.html" class="admin-link">🔒 Admin Dashboard</a>
+        </div>
+    </footer>
+
+    <!-- Script Operations Layer Hooks -->
+    <script src="js/app.js"></script>
+    <script src="js/github.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

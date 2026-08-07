@@ -1,0 +1,43 @@
+Write backend code for user authentication.
+
+Write backend code for JWT-based user authentication using Node.js and Express.	
+
+Write backend code for JWT authentication using Node.js and Express for an e-commerce application.
+
+Return the answer with folder structure, code, and explanation
+
+Use TypeScript. Do not use Passport.js.
+
+Follow security best practices, validate inputs, hash passwords with bcrypt, and explain security decisions.
+
+Version 2
+
+What changed in the prompt?
+
+Added project context.
+
+What improved in the output?
+
+AI gave examples relevant to an e-commerce application instead of a generic authentication example.
+
+What still failed?
+
+It still didn't explain the folder structure.
+
+What would you try next?
+
+Specify the desired output format.
+
+
+You are a senior backend engineer. Create JWT authentication for an e-commerce application using Node.js, Express, TypeScript, Prisma, and PostgreSQL. Return folder structure, complete code, setup steps, and security explanations. Use bcrypt for password hashing, validate inputs, handle errors, and follow OWASP best practices.
+
+
+
+✅ Weak Prompt (Baseline)
+✅ Baseline Output
+✅ Version 1 Prompt + Output + 4 Notes
+✅ Version 2 Prompt + Output + 4 Notes
+✅ Version 3 Prompt + Output + 4 Notes
+✅ Version 4 Prompt + Output + 4 Notes
+✅ Version 5 Prompt + Output + 4 Notes
+✅ Final Reusable Prompt

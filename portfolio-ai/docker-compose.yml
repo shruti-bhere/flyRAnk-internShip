@@ -1,0 +1,59 @@
+
+
+services:
+  # Database Service Node running PostgreSQL + pgvector
+  db:
+    image: ankane/pgvector:latest
+    container_name: portfolio_vector_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - portfolio_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Core Backend Service Node
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio_backend_api
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT}
+      - DEBUG=${DEBUG}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - JWT_ALGORITHM=${JWT_ALGORITHM}
+      - ACCESS_TOKEN_EXPIRE_MINUTES=${ACCESS_TOKEN_EXPIRE_MINUTES}
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL}
+      - HF_EMBEDDING_MODEL=${HF_EMBEDDING_MODEL}
+    depends_on:
+      db:
+        condition: service_healthy
+    extra_hosts:
+      # Allows the backend container to connect seamlessly to an Ollama instance running on the host OS
+      - "host.docker.internal:host-gateway"
+    networks:
+      - portfolio_network
+
+volumes:
+  postgres_data:
+
+networks:
+  portfolio_network:
+    driver: bridge

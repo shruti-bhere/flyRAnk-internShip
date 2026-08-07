@@ -1,0 +1,31 @@
+# Environments & Secrets
+.env
+.env.*
+*.env
+secrets.json
+
+# Python Caches & Dependencies
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Database & Storage Volumes
+postgres_data/
+*.db
+*.sqlite3
+
+# Docker Logging
+*.log
+docker-volumes/
+
+# OS Specific Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
