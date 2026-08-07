@@ -47,3 +47,16 @@ router.post('/login', async (req, res) => {
 });
 
 module.exports = router;
+
+const verifyToken = require('../middleware/auth');
+
+// POST /auth/logout
+router.post('/logout', verifyToken, async (req, res) => {
+  const { error } = await supabase.auth.admin.signOut(req.token); // or local client signout
+
+  if (error) {
+    return res.status(400).json({ error: error.message });
+  }
+
+  return res.status(204).send();
+});

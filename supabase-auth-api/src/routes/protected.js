@@ -26,3 +26,23 @@ router.get('/profile', async (req, res) => {
 });
 
 module.exports = router;
+
+const express = require('express');
+const router = express.Router();
+const verifyToken = require('../middleware/auth');
+
+router.use(verifyToken); // Protections to all routes below
+
+router.get('/profile', (req, res) => {
+  res.status(200).json({
+    id: req.user.id,
+    email: req.user.email,
+    created_at: req.user.created_at
+  });
+});
+
+router.get('/dashboard', (req, res) => {
+  res.status(200).json({ message: `Welcome to dashboard, ${req.user.email}` });
+});
+
+module.exports = router;
