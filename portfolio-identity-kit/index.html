@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Identity Kit — Shruti Bhere</title>
+  <title>Portfolio Identity Kit & Image Curation — Shruti Bhere</title>
   
   <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* CSS Variables matching the tight palette */
     :root {
       --bg-color: #F9FAFB;
       --text-main: #111827;
@@ -33,7 +32,7 @@
       color: var(--text-main);
       line-height: 1.6;
       padding: 2.5rem 1.5rem;
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
     }
 
@@ -55,6 +54,15 @@
       margin-top: 0.25rem;
     }
 
+    .deliverable-section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem 0;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
     section {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
@@ -68,9 +76,6 @@
       font-weight: 600;
       margin-bottom: 1rem;
       color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
 
     /* 1. Typography Styles */
@@ -102,7 +107,7 @@
       overflow: hidden;
     }
     .swatch-color {
-      height: 60px;
+      height: 50px;
       width: 100%;
     }
     .swatch-info {
@@ -148,7 +153,7 @@
       letter-spacing: -0.03em;
     }
 
-    /* 4. Style Note Code Box */
+    /* Code Box */
     .code-box {
       background-color: #1E293B;
       color: #F8FAFC;
@@ -161,20 +166,64 @@
       word-break: break-word;
     }
 
+    /* Image Gallery Grid */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .image-card {
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.75rem;
+      background: #FAFAFA;
+    }
+    .image-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border-color);
+    }
+    .image-card h4 {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .image-card p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      margin-bottom: 0.4rem;
+    }
+    .tag-real { background: #E0F2FE; color: #0369A1; }
+    .tag-ai { background: #F3E8FF; color: #6B21A8; }
+
     footer {
       text-align: center;
       font-size: 0.8rem;
       color: var(--text-muted);
-      margin-top: 2rem;
+      margin-top: 3rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Portfolio Identity Kit</h1>
-    <p>Deliverable for Week 03 — Personal Brand System</p>
+    <h1>Portfolio Week 03 Deliverables</h1>
+    <p>Student: Shruti Bhere — Identity Kit & Image Curation</p>
   </header>
+
+  <!-- ================= PART 1: IDENTITY KIT ================= -->
+  <div class="deliverable-section-title">Part 1: Identity Kit</div>
 
   <!-- 1. TYPOGRAPHY -->
   <section>
@@ -195,7 +244,6 @@
   <section>
     <h2>2. Color Palette</h2>
     <div class="palette-grid">
-      
       <div class="swatch-card">
         <div class="swatch-color" style="background-color: #F9FAFB; border-bottom: 1px solid #E5E7EB;"></div>
         <div class="swatch-info">
@@ -203,7 +251,6 @@
           <span>#F9FAFB</span>
         </div>
       </div>
-
       <div class="swatch-card">
         <div class="swatch-color" style="background-color: #111827;"></div>
         <div class="swatch-info">
@@ -211,7 +258,6 @@
           <span>#111827</span>
         </div>
       </div>
-
       <div class="swatch-card">
         <div class="swatch-color" style="background-color: #6B7280;"></div>
         <div class="swatch-info">
@@ -219,7 +265,6 @@
           <span>#6B7280</span>
         </div>
       </div>
-
       <div class="swatch-card">
         <div class="swatch-color" style="background-color: #4F46E5;"></div>
         <div class="swatch-info">
@@ -227,7 +272,6 @@
           <span>#4F46E5</span>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -236,12 +280,9 @@
     <h2>3. Favicon & Brandmark</h2>
     <div class="brand-preview">
       <div>
-        <div class="favicon-box">
-          &lt;<span>SB</span>&gt;
-        </div>
+        <div class="favicon-box">&lt;<span>SB</span>&gt;</div>
         <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; display: block;">Favicon (32x32)</span>
       </div>
-
       <div>
         <div class="logo-mark">Shruti Bhere</div>
         <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; display: block;">Header Logo Mark</span>
@@ -256,8 +297,70 @@
 Mood: A minimal, precise, and high-contrast technical system that lets complex AI architecture and case studies speak for themselves.</div>
   </section>
 
+
+  <!-- ================= PART 2: IMAGE CURATION ================= -->
+  <div class="deliverable-section-title">Part 2: Curated Image Set</div>
+
+  <!-- 5. IMAGE INVENTORY -->
+  <section>
+    <h2>5. Asset Inventory & Mapping</h2>
+    <div class="image-grid">
+      
+      <div class="image-card">
+        <span class="tag tag-real">Real Photo</span>
+        <!-- Replace src with your image path (e.g., src="headshot.jpg") -->
+        <img src="https://via.placeholder.com/300x140/111827/FFFFFF?text=Real+Headshot" alt="Headshot">
+        <h4>Hero Portrait</h4>
+        <p>Authentic profile photo establishing personal connection and recruiter trust.</p>
+      </div>
+
+      <div class="image-card">
+        <span class="tag tag-real">Real Capture</span>
+        <!-- Replace src with your screenshot -->
+        <img src="https://via.placeholder.com/300x140/4F46E5/FFFFFF?text=AI+Learning+Platform+UI" alt="AI Platform UI">
+        <h4>AI Learning Platform</h4>
+        <p>Clean UI capture showing live code execution and automated feedback.</p>
+      </div>
+
+      <div class="image-card">
+        <span class="tag tag-real">Real Capture</span>
+        <!-- Replace src with your screenshot -->
+        <img src="https://via.placeholder.com/300x140/6B7280/FFFFFF?text=LangGraph+Workflow" alt="Workflow Visualizer">
+        <h4>Email Bot Workflow</h4>
+        <p>LangGraph Studio visualizer DAG displaying state machine logic.</p>
+      </div>
+
+      <div class="image-card">
+        <span class="tag tag-ai">AI Pattern</span>
+        <img src="https://via.placeholder.com/300x140/F9FAFB/111827?text=Vector+Grid+Texture" alt="Texture">
+        <h4>Background Mesh</h4>
+        <p>Subtle low-opacity vector grid pattern matching identity kit colors.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. DECISION LOG & REJECTION NOTE -->
+  <section>
+    <h2>6. Discernment & Rejection Note</h2>
+    <div style="font-size: 0.95rem; display: flex; flex-direction: column; gap: 1rem;">
+      <div>
+        <strong style="color: var(--accent);">Why Real Captures Over AI Stand-ins:</strong>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">AI-generated software interfaces look synthetic and contain fake syntax upon inspection. Utilizing real high-resolution screenshots of active code execution, LangGraph workflows, and vector storage pipelines provides genuine proof of engineering execution.</p>
+      </div>
+
+      <div style="background-color: #FEF2F2; border: 1px solid #FCA5A5; padding: 1rem; border-radius: 6px;">
+        <strong style="color: #991B1B;">Rejected Asset Analysis:</strong>
+        <p style="color: #7F1D1D; font-size: 0.88rem; margin-top: 0.25rem;">
+          <strong>Asset:</strong> <code>glowing_3d_neural_network_sphere.png</code> (AI Generated)<br>
+          <strong>Reason:</strong> The initial concept yielded glowing neon particle trails and hyper-detailed 3D nodes. While visually striking, it violated the core style note rule: <em>the background must frame the work, not compete with it.</em> It distracted from project descriptions and felt like a generic stock template. I rejected it in favor of a flat, minimal vector grid pattern.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>Submitted via Track Thread — Week 03 Identity Kit</p>
+    <p>Submitted via Track Thread — Week 03 Portfolio Deliverables</p>
   </footer>
 
 </body>

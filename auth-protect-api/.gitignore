@@ -1,5 +1,24 @@
-.env
+# Virtual Environments
+venv/
+.venv/
+*/venv/
+*/.venv/
+
+# Python Cache & Databases
 __pycache__/
 *.pyc
-.venv/
-env/
+*.db
+tasks.db
+
+# Environment Secrets
+.env
+*.env
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# Build & Log files
+dist/
+build/
+*.log
