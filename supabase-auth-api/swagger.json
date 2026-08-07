@@ -1,0 +1,74 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Auth Practice API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/public/info": {
+      "get": {
+        "summary": "Get public info",
+        "responses": { "200": { "description": "Success" } }
+      }
+    },
+    "/auth/signup": {
+      "post": {
+        "summary": "Sign Up",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "201": { "description": "Created" } }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Log In",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Success" } }
+      }
+    },
+    "/protected/profile": {
+      "get": {
+        "summary": "Get protected profile",
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Success" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
