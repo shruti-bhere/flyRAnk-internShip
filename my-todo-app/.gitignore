@@ -1,0 +1,7 @@
+node_modules/
+tasks.db
+tasks.db-wal
+tasks.db-shm
+.DS_Store
+__pycache__/
+*.pyc
