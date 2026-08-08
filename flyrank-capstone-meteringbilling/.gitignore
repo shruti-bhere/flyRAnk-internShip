@@ -1,0 +1,40 @@
+# Secret Keys & Environment Variables (CRITICAL)
+.env
+.env.local
+.env.*
+*.env
+
+# Python Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local SQLite Test Databases
+*.db
+*.sqlite3
+test.db
+
+# Docker & Local Server Logs
+*.log
+docker_data/
+postgres_data/
+
+# Code Editor & System Files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Capstone Keep-alive Overrides
+!.gitignore
+!.env.example
