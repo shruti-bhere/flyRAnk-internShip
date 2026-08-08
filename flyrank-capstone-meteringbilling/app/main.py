@@ -120,4 +120,4 @@ async def stripe_webhook(request: Request, db: Session = Depends(get_db)):
                 sub.plan_id = "Pro"
                 db.commit()
 
-    return {"status": "success"}
+    return {"status": "success"}    
