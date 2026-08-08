@@ -1,0 +1,30 @@
+# Environment variables and API Keys (CRITICAL)
+.env
+.env.local
+*.env
+
+# Python Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python Bytecode and Cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE and Code Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Generated Pipeline Outputs (Optional - keep input/output structure clean)
+data/outputs/*.md
+!data/outputs/.gitkeep
+
+# Git configuration keep-alive
+!.gitignore
