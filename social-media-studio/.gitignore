@@ -1,0 +1,30 @@
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Local Vector Database & Output Storage
+chroma_db/
+data/*.pdf
+generated_posts.json
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environment Variables & Configs
+.env
+.env.local
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Docker logs
+*.log
