@@ -59,3 +59,6 @@ python -m venv venv
 venv\Scripts\activate / .\venv\Scripts\Activate.ps1
 
 python main.py 
+
+http://localhost:8000/docs / Swagger UI
+http://localhost:8000/. / root 
