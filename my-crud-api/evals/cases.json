@@ -1,0 +1,10 @@
+[
+  { "input": "Learn SQLite parameterized queries", "expected_category": "learning" },
+  { "input": "Build FastAPI CRUD endpoints", "expected_category": "work" },
+  { "input": "Inspect database in DB Browser", "expected_category": "admin" },
+  { "input": "Buy milk and groceries", "expected_category": "personal" },
+  { "input": "Prepare quarterly board presentation slides", "expected_category": "work" },
+  { "input": "Do 30 minutes of cardio exercise", "expected_category": "personal" },
+  { "input": "Clean up server error logs", "expected_category": "admin" },
+  { "input": "Read chapter 3 of Rust book", "expected_category": "learning" }
+]
