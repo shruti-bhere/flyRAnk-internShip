@@ -21,6 +21,7 @@
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -36,7 +37,7 @@
                     Specializing in building LLM applications, autonomous AI agents, and production-grade RAG architecture with Python, LangChain, LangGraph, and FastAPI.
                 </p>
                 <div class="hero-actions">
-                    <a href="mailto:bhereshruti29@gmail.com" class="btn btn-primary">Contact Me</a>
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
                     <a href="https://github.com/yourusername" target="_blank" class="btn btn-secondary">GitHub</a>
                     <a href="https://linkedin.com/in/yourusername" target="_blank" class="btn btn-secondary">LinkedIn</a>
                 </div>
@@ -211,6 +212,40 @@
                 <h3>Framework Certifications & Education</h3>
                 <p><strong>Frameworks:</strong> LangChain Essentials, LangGraph Essentials, Introduction to LangGraph (Python), LangSmith Agent Builder & Essentials</p>
                 <p><strong>Education:</strong> Bachelor of Commerce (B.Com) — University of Mumbai (Expected May 2026)</p>
+            </div>
+        </section>
+
+        <!-- Contact Section (Web3Forms Vercel Integration) -->
+        <section id="contact">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="timeline-card" style="max-width: 600px;">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="e87847bd-287a-40cb-8787-a88d943e27db">
+
+                    <div style="margin-bottom: 1.25rem;">
+                        <label for="name" style="display: block; margin-bottom: 0.4rem; color: var(--text-primary); font-size: 0.9rem; font-weight: 500;">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Jane Doe" style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary); font-size: 0.95rem;">
+                    </div>
+
+                    <div style="margin-bottom: 1.25rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.4rem; color: var(--text-primary); font-size: 0.9rem; font-weight: 500;">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="jane@example.com" style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary); font-size: 0.95rem;">
+                    </div>
+
+                    <!-- Updated Working Portfolio Domain Field -->
+                    <div style="margin-bottom: 1.25rem;">
+                        <label for="portfolio_url" style="display: block; margin-bottom: 0.4rem; color: var(--text-primary); font-size: 0.9rem; font-weight: 500;">Portfolio URL</label>
+                        <input type="text" id="portfolio_url" name="Portfolio_URL" value="https://shruti-bhere-resume.vercel.app" readonly style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-secondary); font-size: 0.95rem;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="message" style="display: block; margin-bottom: 0.4rem; color: var(--text-primary); font-size: 0.9rem; font-weight: 500;">Message</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Write your message here..." style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary); font-size: 0.95rem; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; cursor: pointer;">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
