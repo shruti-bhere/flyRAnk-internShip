@@ -1,367 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Identity Kit & Image Curation — Shruti Bhere</title>
-  
-  <!-- Inter Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg-color: #F9FAFB;
-      --text-main: #111827;
-      --text-muted: #6B7280;
-      --accent: #4F46E5;
-      --border-color: #E5E7EB;
-      --card-bg: #FFFFFF;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding: 2.5rem 1.5rem;
-      max-width: 850px;
-      margin: 0 auto;
-    }
-
-    header {
-      border-bottom: 2px solid var(--border-color);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    header p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-top: 0.25rem;
-    }
-
-    .deliverable-section-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin: 2.5rem 0 1rem 0;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    section {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    h2 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--text-main);
-    }
-
-    /* 1. Typography Styles */
-    .font-spec {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .font-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 0;
-      border-bottom: 1px dashed var(--border-color);
-    }
-    .font-row:last-child {
-      border-bottom: none;
-    }
-
-    /* 2. Palette Swatches */
-    .palette-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-    }
-    .swatch-card {
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    .swatch-color {
-      height: 50px;
-      width: 100%;
-    }
-    .swatch-info {
-      padding: 0.65rem;
-      background: #FAFAFA;
-    }
-    .swatch-info strong {
-      display: block;
-      font-size: 0.85rem;
-    }
-    .swatch-info span {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      font-family: monospace;
-    }
-
-    /* 3. Logo/Favicon Visuals */
-    .brand-preview {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .favicon-box {
-      width: 56px;
-      height: 56px;
-      background-color: var(--text-main);
-      color: #FFFFFF;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
-    }
-    .favicon-box span {
-      color: var(--accent);
-    }
-    .logo-mark {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
-
-    /* Code Box */
-    .code-box {
-      background-color: #1E293B;
-      color: #F8FAFC;
-      padding: 1rem;
-      border-radius: 6px;
-      font-family: monospace;
-      font-size: 0.85rem;
-      line-height: 1.5;
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-
-    /* Image Gallery Grid */
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .image-card {
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      padding: 0.75rem;
-      background: #FAFAFA;
-    }
-    .image-card img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 4px;
-      border: 1px solid var(--border-color);
-    }
-    .image-card h4 {
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-    }
-    .image-card p {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-    .tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 0.15rem 0.4rem;
-      border-radius: 4px;
-      margin-bottom: 0.4rem;
-    }
-    .tag-real { background: #E0F2FE; color: #0369A1; }
-    .tag-ai { background: #F3E8FF; color: #6B21A8; }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 3rem;
-      border-top: 1px solid var(--border-color);
-      padding-top: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruti Suresh Bhere - Backend AI Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="background-glow"></div>
 
-  <header>
-    <h1>Portfolio Week 03 Deliverables</h1>
-    <p>Student: Shruti Bhere — Identity Kit & Image Curation</p>
-  </header>
-
-  <!-- ================= PART 1: IDENTITY KIT ================= -->
-  <div class="deliverable-section-title">Part 1: Identity Kit</div>
-
-  <!-- 1. TYPOGRAPHY -->
-  <section>
-    <h2>1. Typography Selection</h2>
-    <div class="font-spec">
-      <div class="font-row">
-        <span><strong>Heading Font:</strong> Inter (Bold / SemiBold)</span>
-        <span style="font-weight: 700;">Aa Bb Cc 123</span>
-      </div>
-      <div class="font-row">
-        <span><strong>Body Font:</strong> Inter (Regular / Medium)</span>
-        <span style="font-weight: 400;">Aa Bb Cc 123</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. COLOR PALETTE -->
-  <section>
-    <h2>2. Color Palette</h2>
-    <div class="palette-grid">
-      <div class="swatch-card">
-        <div class="swatch-color" style="background-color: #F9FAFB; border-bottom: 1px solid #E5E7EB;"></div>
-        <div class="swatch-info">
-          <strong>Background</strong>
-          <span>#F9FAFB</span>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Shruti Bhere<span>.ai</span></a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+            </nav>
         </div>
-      </div>
-      <div class="swatch-card">
-        <div class="swatch-color" style="background-color: #111827;"></div>
-        <div class="swatch-info">
-          <strong>Near-Black Text</strong>
-          <span>#111827</span>
-        </div>
-      </div>
-      <div class="swatch-card">
-        <div class="swatch-color" style="background-color: #6B7280;"></div>
-        <div class="swatch-info">
-          <strong>Subtle Text</strong>
-          <span>#6B7280</span>
-        </div>
-      </div>
-      <div class="swatch-card">
-        <div class="swatch-color" style="background-color: #4F46E5;"></div>
-        <div class="swatch-info">
-          <strong>Tech Accent</strong>
-          <span>#4F46E5</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- 3. LOGO & FAVICON -->
-  <section>
-    <h2>3. Favicon & Brandmark</h2>
-    <div class="brand-preview">
-      <div>
-        <div class="favicon-box">&lt;<span>SB</span>&gt;</div>
-        <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; display: block;">Favicon (32x32)</span>
-      </div>
-      <div>
-        <div class="logo-mark">Shruti Bhere</div>
-        <span style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; display: block;">Header Logo Mark</span>
-      </div>
-    </div>
-  </section>
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="about" class="hero-section">
+            <div class="hero-content">
+                <span class="status-badge"><span class="pulse"></span> Available for Backend AI Roles</span>
+                <h1>Shruti Suresh Bhere</h1>
+                <p class="hero-subtitle">Backend AI Engineering Intern | Agentic Workflows & RAG Pipelines</p>
+                <p class="hero-description">
+                    Specializing in building LLM applications, autonomous AI agents, and production-grade RAG architecture with Python, LangChain, LangGraph, and FastAPI.
+                </p>
+                <div class="hero-actions">
+                    <a href="mailto:bhereshruti29@gmail.com" class="btn btn-primary">Contact Me</a>
+                    <a href="https://github.com/yourusername" target="_blank" class="btn btn-secondary">GitHub</a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- 4. STYLE NOTE -->
-  <section>
-    <h2>4. Claude Project Style Note</h2>
-    <div class="code-box">Style Guide: Fonts: Inter (Headings: Bold, Body: Regular). Palette: #F9FAFB (bg), #111827 (text), #6B7280 (subtle), #4F46E5 (accent).
-Mood: A minimal, precise, and high-contrast technical system that lets complex AI architecture and case studies speak for themselves.</div>
-  </section>
+        <!-- Technical Skills Section -->
+        <section id="skills">
+            <h2 class="section-title">Technical Expertise</h2>
+            
+            <!-- Dynamic Add Skill Form -->
+            <div class="card" style="margin-bottom: 1.5rem; background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius); border: 1px dashed var(--border-color);">
+                <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--accent-blue);">+ Add New Skill Category</h3>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <input type="text" id="skillIconInput" placeholder="Emoji (e.g. 🚀)" style="width: 100px; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary);">
+                    <input type="text" id="skillTitleInput" placeholder="Category Name" style="flex: 1; min-width: 150px; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary);">
+                    <input type="text" id="skillDescInput" placeholder="Skills list (comma separated)" style="flex: 2; min-width: 200px; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary);">
+                    <button onclick="addNewSkill()" class="btn btn-primary" style="padding: 0.5rem 1rem; cursor: pointer;">Add Skill</button>
+                </div>
+            </div>
 
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Static Default Skills -->
+                <div class="skill-card">
+                    <div class="skill-icon">🧠</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Generative AI, LLM Applications, RAG Pipelines, Agentic Workflows, Model Context Protocol (MCP)</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Frameworks & Tools</h3>
+                    <p>LangChain, LangGraph, LangSmith, Ollama, Hugging Face</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Backend & Web</h3>
+                    <p>Python (FastAPI, Streamlit), Node.js, Java (Spring Boot), REST APIs</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Databases & Vector Storage</h3>
+                    <p>PostgreSQL, pg_vector, ChromaDB</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐳</div>
+                    <h3>DevOps & Infrastructure</h3>
+                    <p>Docker, Docker Compose, Git, GitHub</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- ================= PART 2: IMAGE CURATION ================= -->
-  <div class="deliverable-section-title">Part 2: Curated Image Set</div>
+        <!-- Work Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <div>
+                        <h3>Backend AI Engineering Intern</h3>
+                        <span class="company-name">FlyRank AI</span>
+                    </div>
+                    <span class="date-badge">July 2026 – August 2026</span>
+                </div>
+                <ul class="bullet-list">
+                    <li>Developed backend AI architecture and autonomous features as part of the FlyRank AI Track.</li>
+                    <li>Built and evaluated evidence-backed track assignments and capstone implementations centered on AI deployment.</li>
+                    <li>Engineered API endpoints and optimized agent workflows within the FlyRank production ecosystem.</li>
+                </ul>
+            </div>
+        </section>
 
-  <!-- 5. IMAGE INVENTORY -->
-  <section>
-    <h2>5. Asset Inventory & Mapping</h2>
-    <div class="image-grid">
-      
-      <div class="image-card">
-        <span class="tag tag-real">Real Photo</span>
-        <!-- Replace src with your image path (e.g., src="headshot.jpg") -->
-        <img src="https://via.placeholder.com/300x140/111827/FFFFFF?text=Real+Headshot" alt="Headshot">
-        <h4>Hero Portrait</h4>
-        <p>Authentic profile photo establishing personal connection and recruiter trust.</p>
-      </div>
+        <!-- Featured Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span>Python</span><span>Streamlit</span><span>pg_vector</span><span>Hugging Face</span>
+                    </div>
+                    <h3>PDF Processing & RAG Interaction System</h3>
+                    <ul class="bullet-list">
+                        <li>Built a dynamic RAG pipeline allowing interactive semantic querying over PDF documents.</li>
+                        <li>Configured pg_vector for high-dimensional vector search and integrated open-source Hugging Face embeddings.</li>
+                    </ul>
+                </div>
 
-      <div class="image-card">
-        <span class="tag tag-real">Real Capture</span>
-        <!-- Replace src with your screenshot -->
-        <img src="https://via.placeholder.com/300x140/4F46E5/FFFFFF?text=AI+Learning+Platform+UI" alt="AI Platform UI">
-        <h4>AI Learning Platform</h4>
-        <p>Clean UI capture showing live code execution and automated feedback.</p>
-      </div>
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span>Python</span><span>LangGraph</span><span>Agentic Workflows</span>
+                    </div>
+                    <h3>Stateful Email Drafting Agent</h3>
+                    <ul class="bullet-list">
+                        <li>Designed a multi-step agentic email generation tool using stateful graph workflows in LangGraph.</li>
+                        <li>Integrated custom conditional routing logic to generate dynamic responses based on email intent.</li>
+                    </ul>
+                </div>
 
-      <div class="image-card">
-        <span class="tag tag-real">Real Capture</span>
-        <!-- Replace src with your screenshot -->
-        <img src="https://via.placeholder.com/300x140/6B7280/FFFFFF?text=LangGraph+Workflow" alt="Workflow Visualizer">
-        <h4>Email Bot Workflow</h4>
-        <p>LangGraph Studio visualizer DAG displaying state machine logic.</p>
-      </div>
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span>Node.js</span><span>Android</span><span>RAG Integration</span>
+                    </div>
+                    <h3>Legal Document Analysis Platform</h3>
+                    <ul class="bullet-list">
+                        <li>Developed a full-stack document analyzer enabling instant contract risk summaries and Q&A.</li>
+                        <li>Constructed Node.js API backend for high-throughput document parsing and secure data routing.</li>
+                    </ul>
+                </div>
 
-      <div class="image-card">
-        <span class="tag tag-ai">AI Pattern</span>
-        <img src="https://via.placeholder.com/300x140/F9FAFB/111827?text=Vector+Grid+Texture" alt="Texture">
-        <h4>Background Mesh</h4>
-        <p>Subtle low-opacity vector grid pattern matching identity kit colors.</p>
-      </div>
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span>Node.js</span><span>Web Application</span><span>AI Analysis</span>
+                    </div>
+                    <h3>AI-Assisted Learning Platform</h3>
+                    <ul class="bullet-list">
+                        <li>Created an interactive learning platform with real-time AI code analysis and automated debugging suggestions.</li>
+                        <li>Implemented authentication, progress tracking, streaks, and dynamic leaderboard mechanics.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    </div>
-  </section>
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2 class="section-title">Anthropic Academy Certifications</h2>
+            
+            <!-- Dynamic Add Certification Form -->
+            <div class="card" style="margin-bottom: 1.5rem; background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius); border: 1px dashed var(--border-color);">
+                <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--accent-purple);">+ Add New Certification</h3>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <input type="text" id="certTitleInput" placeholder="Certificate Name" style="flex: 2; min-width: 200px; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary);">
+                    <select id="certBadgeInput" style="flex: 1; min-width: 130px; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary);">
+                        <option value="Completed">Completed</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                    <button onclick="addNewCert()" class="btn btn-primary" style="padding: 0.5rem 1rem; cursor: pointer;">Add Certification</button>
+                </div>
+            </div>
 
-  <!-- 6. DECISION LOG & REJECTION NOTE -->
-  <section>
-    <h2>6. Discernment & Rejection Note</h2>
-    <div style="font-size: 0.95rem; display: flex; flex-direction: column; gap: 1rem;">
-      <div>
-        <strong style="color: var(--accent);">Why Real Captures Over AI Stand-ins:</strong>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">AI-generated software interfaces look synthetic and contain fake syntax upon inspection. Utilizing real high-resolution screenshots of active code execution, LangGraph workflows, and vector storage pipelines provides genuine proof of engineering execution.</p>
-      </div>
+            <div class="certifications-grid" id="certificationsGrid">
+                <!-- Static Default Certifications -->
+                <div class="cert-card">
+                    <span class="cert-title">AI Fluency: Framework & Foundations</span>
+                    <span class="cert-badge beginner">Beginner</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-title">Claude 101</span>
+                    <span class="cert-badge">Completed</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-title">Introduction to Claude Cowork</span>
+                    <span class="cert-badge">Completed</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-title">AI Capabilities and Limitations</span>
+                    <span class="cert-badge">Completed</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-title">AI Fluency for Students</span>
+                    <span class="cert-badge">Completed</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-title">AI Fluency for Small Businesses</span>
+                    <span class="cert-badge">Completed</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-title">AI Fluency for Educators</span>
+                    <span class="cert-badge">Completed</span>
+                </div>
+            </div>
 
-      <div style="background-color: #FEF2F2; border: 1px solid #FCA5A5; padding: 1rem; border-radius: 6px;">
-        <strong style="color: #991B1B;">Rejected Asset Analysis:</strong>
-        <p style="color: #7F1D1D; font-size: 0.88rem; margin-top: 0.25rem;">
-          <strong>Asset:</strong> <code>glowing_3d_neural_network_sphere.png</code> (AI Generated)<br>
-          <strong>Reason:</strong> The initial concept yielded glowing neon particle trails and hyper-detailed 3D nodes. While visually striking, it violated the core style note rule: <em>the background must frame the work, not compete with it.</em> It distracted from project descriptions and felt like a generic stock template. I rejected it in favor of a flat, minimal vector grid pattern.
-        </p>
-      </div>
-    </div>
-  </section>
+            <div class="other-certifications">
+                <h3>Framework Certifications & Education</h3>
+                <p><strong>Frameworks:</strong> LangChain Essentials, LangGraph Essentials, Introduction to LangGraph (Python), LangSmith Agent Builder & Essentials</p>
+                <p><strong>Education:</strong> Bachelor of Commerce (B.Com) — University of Mumbai (Expected May 2026)</p>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>Submitted via Track Thread — Week 03 Portfolio Deliverables</p>
-  </footer>
+    <footer>
+        <p>© 2026 Shruti Suresh Bhere. Built with HTML & CSS.</p>
+    </footer>
 
+    <!-- JavaScript Persistence Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSavedSkills();
+            loadSavedCerts();
+        });
+
+        // Skill Management
+        function addNewSkill() {
+            const icon = document.getElementById('skillIconInput').value.trim() || '⚡';
+            const title = document.getElementById('skillTitleInput').value.trim();
+            const desc = document.getElementById('skillDescInput').value.trim();
+
+            if (!title || !desc) {
+                alert('Please enter both a skill category title and details.');
+                return;
+            }
+
+            const id = Date.now();
+            const skillData = { id, icon, title, desc };
+            
+            renderSkillCard(skillData);
+
+            const savedSkills = JSON.parse(localStorage.getItem('customSkills') || '[]');
+            savedSkills.push(skillData);
+            localStorage.setItem('customSkills', JSON.stringify(savedSkills));
+
+            document.getElementById('skillIconInput').value = '';
+            document.getElementById('skillTitleInput').value = '';
+            document.getElementById('skillDescInput').value = '';
+        }
+
+        function renderSkillCard({ id, icon, title, desc }) {
+            const grid = document.getElementById('skillsGrid');
+            const newCard = document.createElement('div');
+            newCard.className = 'skill-card';
+            newCard.id = `skill-${id}`;
+            newCard.style.position = 'relative';
+            newCard.innerHTML = `
+                <button onclick="deleteSkill(${id})" style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ef4444; cursor: pointer; font-weight: bold;">✕</button>
+                <div class="skill-icon">${icon}</div>
+                <h3>${title}</h3>
+                <p>${desc}</p>
+            `;
+            grid.appendChild(newCard);
+        }
+
+        function loadSavedSkills() {
+            const savedSkills = JSON.parse(localStorage.getItem('customSkills') || '[]');
+            savedSkills.forEach(skill => renderSkillCard(skill));
+        }
+
+        function deleteSkill(id) {
+            document.getElementById(`skill-${id}`)?.remove();
+            let savedSkills = JSON.parse(localStorage.getItem('customSkills') || '[]');
+            savedSkills = savedSkills.filter(item => item.id !== id);
+            localStorage.setItem('customSkills', JSON.stringify(savedSkills));
+        }
+
+        // Certification Management
+        function addNewCert() {
+            const title = document.getElementById('certTitleInput').value.trim();
+            const badgeType = document.getElementById('certBadgeInput').value;
+
+            if (!title) {
+                alert('Please enter a certificate title.');
+                return;
+            }
+
+            const id = Date.now();
+            const certData = { id, title, badgeType };
+
+            renderCertCard(certData);
+
+            const savedCerts = JSON.parse(localStorage.getItem('customCerts') || '[]');
+            savedCerts.push(certData);
+            localStorage.setItem('customCerts', JSON.stringify(savedCerts));
+
+            document.getElementById('certTitleInput').value = '';
+        }
+
+        function renderCertCard({ id, title, badgeType }) {
+            const grid = document.getElementById('certificationsGrid');
+            const newCard = document.createElement('div');
+            newCard.className = 'cert-card';
+            newCard.id = `cert-${id}`;
+            newCard.style.position = 'relative';
+            
+            const badgeClass = badgeType.toLowerCase() === 'beginner' ? 'cert-badge beginner' : 'cert-badge';
+
+            newCard.innerHTML = `
+                <button onclick="deleteCert(${id})" style="position: absolute; top: 8px; right: 8px; background: transparent; border: none; color: #ef4444; cursor: pointer; font-weight: bold;">✕</button>
+                <span class="cert-title" style="padding-right: 15px;">${title}</span>
+                <span class="${badgeClass}">${badgeType}</span>
+            `;
+
+            grid.appendChild(newCard);
+        }
+
+        function loadSavedCerts() {
+            const savedCerts = JSON.parse(localStorage.getItem('customCerts') || '[]');
+            savedCerts.forEach(cert => renderCertCard(cert));
+        }
+
+        function deleteCert(id) {
+            document.getElementById(`cert-${id}`)?.remove();
+            let savedCerts = JSON.parse(localStorage.getItem('customCerts') || '[]');
+            savedCerts = savedCerts.filter(item => item.id !== id);
+            localStorage.setItem('customCerts', JSON.stringify(savedCerts));
+        }
+    </script>
 </body>
 </html>
