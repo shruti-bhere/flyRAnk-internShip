@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shruti Suresh Bhere - Backend AI Engineer</title>
+    
+    <!-- Meta & SEO Tags -->
+    <meta name="description" content="Portfolio of Shruti Suresh Bhere: Backend AI Engineer specializing in LLM applications, LangGraph agentic workflows, and production RAG pipelines.">
+    <meta name="keywords" content="Backend AI, LLM, LangChain, LangGraph, RAG, Python, FastAPI, PostgreSQL">
+    <meta name="author" content="Shruti Suresh Bhere">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -187,6 +193,10 @@
                     <span class="cert-badge">Completed</span>
                 </div>
                 <div class="cert-card">
+                    <span class="cert-title">Claude Code 101</span>
+                    <span class="cert-badge">Completed</span>
+                </div>
+                <div class="cert-card">
                     <span class="cert-title">Introduction to Claude Cowork</span>
                     <span class="cert-badge">Completed</span>
                 </div>
@@ -215,7 +225,7 @@
             </div>
         </section>
 
-        <!-- Contact Section (Web3Forms Vercel Integration) -->
+        <!-- Standard Contact Section -->
         <section id="contact">
             <h2 class="section-title">Get in Touch</h2>
             <div class="timeline-card" style="max-width: 600px;">
@@ -233,12 +243,6 @@
                         <input type="email" id="email" name="email" required placeholder="jane@example.com" style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary); font-size: 0.95rem;">
                     </div>
 
-                    <!-- Updated Working Portfolio Domain Field -->
-                    <div style="margin-bottom: 1.25rem;">
-                        <label for="portfolio_url" style="display: block; margin-bottom: 0.4rem; color: var(--text-primary); font-size: 0.9rem; font-weight: 500;">Portfolio URL</label>
-                        <input type="text" id="portfolio_url" name="Portfolio_URL" value="https://shruti-bhere-resume.vercel.app" readonly style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-secondary); font-size: 0.95rem;">
-                    </div>
-
                     <div style="margin-bottom: 1.5rem;">
                         <label for="message" style="display: block; margin-bottom: 0.4rem; color: var(--text-primary); font-size: 0.9rem; font-weight: 500;">Message</label>
                         <textarea id="message" name="message" rows="4" required placeholder="Write your message here..." style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--bg-main); color: var(--text-primary); font-size: 0.95rem; resize: vertical;"></textarea>
@@ -254,116 +258,7 @@
         <p>© 2026 Shruti Suresh Bhere. Built with HTML & CSS.</p>
     </footer>
 
-    <!-- JavaScript Persistence Logic -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            loadSavedSkills();
-            loadSavedCerts();
-        });
-
-        // Skill Management
-        function addNewSkill() {
-            const icon = document.getElementById('skillIconInput').value.trim() || '⚡';
-            const title = document.getElementById('skillTitleInput').value.trim();
-            const desc = document.getElementById('skillDescInput').value.trim();
-
-            if (!title || !desc) {
-                alert('Please enter both a skill category title and details.');
-                return;
-            }
-
-            const id = Date.now();
-            const skillData = { id, icon, title, desc };
-            
-            renderSkillCard(skillData);
-
-            const savedSkills = JSON.parse(localStorage.getItem('customSkills') || '[]');
-            savedSkills.push(skillData);
-            localStorage.setItem('customSkills', JSON.stringify(savedSkills));
-
-            document.getElementById('skillIconInput').value = '';
-            document.getElementById('skillTitleInput').value = '';
-            document.getElementById('skillDescInput').value = '';
-        }
-
-        function renderSkillCard({ id, icon, title, desc }) {
-            const grid = document.getElementById('skillsGrid');
-            const newCard = document.createElement('div');
-            newCard.className = 'skill-card';
-            newCard.id = `skill-${id}`;
-            newCard.style.position = 'relative';
-            newCard.innerHTML = `
-                <button onclick="deleteSkill(${id})" style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ef4444; cursor: pointer; font-weight: bold;">✕</button>
-                <div class="skill-icon">${icon}</div>
-                <h3>${title}</h3>
-                <p>${desc}</p>
-            `;
-            grid.appendChild(newCard);
-        }
-
-        function loadSavedSkills() {
-            const savedSkills = JSON.parse(localStorage.getItem('customSkills') || '[]');
-            savedSkills.forEach(skill => renderSkillCard(skill));
-        }
-
-        function deleteSkill(id) {
-            document.getElementById(`skill-${id}`)?.remove();
-            let savedSkills = JSON.parse(localStorage.getItem('customSkills') || '[]');
-            savedSkills = savedSkills.filter(item => item.id !== id);
-            localStorage.setItem('customSkills', JSON.stringify(savedSkills));
-        }
-
-        // Certification Management
-        function addNewCert() {
-            const title = document.getElementById('certTitleInput').value.trim();
-            const badgeType = document.getElementById('certBadgeInput').value;
-
-            if (!title) {
-                alert('Please enter a certificate title.');
-                return;
-            }
-
-            const id = Date.now();
-            const certData = { id, title, badgeType };
-
-            renderCertCard(certData);
-
-            const savedCerts = JSON.parse(localStorage.getItem('customCerts') || '[]');
-            savedCerts.push(certData);
-            localStorage.setItem('customCerts', JSON.stringify(savedCerts));
-
-            document.getElementById('certTitleInput').value = '';
-        }
-
-        function renderCertCard({ id, title, badgeType }) {
-            const grid = document.getElementById('certificationsGrid');
-            const newCard = document.createElement('div');
-            newCard.className = 'cert-card';
-            newCard.id = `cert-${id}`;
-            newCard.style.position = 'relative';
-            
-            const badgeClass = badgeType.toLowerCase() === 'beginner' ? 'cert-badge beginner' : 'cert-badge';
-
-            newCard.innerHTML = `
-                <button onclick="deleteCert(${id})" style="position: absolute; top: 8px; right: 8px; background: transparent; border: none; color: #ef4444; cursor: pointer; font-weight: bold;">✕</button>
-                <span class="cert-title" style="padding-right: 15px;">${title}</span>
-                <span class="${badgeClass}">${badgeType}</span>
-            `;
-
-            grid.appendChild(newCard);
-        }
-
-        function loadSavedCerts() {
-            const savedCerts = JSON.parse(localStorage.getItem('customCerts') || '[]');
-            savedCerts.forEach(cert => renderCertCard(cert));
-        }
-
-        function deleteCert(id) {
-            document.getElementById(`cert-${id}`)?.remove();
-            let savedCerts = JSON.parse(localStorage.getItem('customCerts') || '[]');
-            savedCerts = savedCerts.filter(item => item.id !== id);
-            localStorage.setItem('customCerts', JSON.stringify(savedCerts));
-        }
-    </script>
+    <!-- Connected JavaScript File -->
+    <script src="script.js"></script>
 </body>
 </html>
